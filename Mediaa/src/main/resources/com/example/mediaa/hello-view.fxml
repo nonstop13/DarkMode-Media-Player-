@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mediaa.Controller">
+   <bottom>
+      <BorderPane prefHeight="88.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <left>
+            <Pane prefHeight="82.0" prefWidth="279.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="play" fitHeight="40.0" fitWidth="40.0" layoutX="6.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../../../images/play.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pause" fitHeight="40.0" fitWidth="40.0" layoutX="39.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../../../images/pause.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="stop" fitHeight="40.0" fitWidth="40.0" layoutX="185.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../../../images/stop.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="playing" layoutX="12.0" layoutY="4.0" text="--:--" textFill="WHITE" />
+                  <ImageView fx:id="fast" fitHeight="40.0" fitWidth="40.0" layoutX="231.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../../../images/seek+.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="slow" fitHeight="40.0" fitWidth="40.0" layoutX="140.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../../../images/seek-.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="82.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="153.0" layoutY="20.0">
+                     <image>
+                        <Image url="@../../../images/speaker.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="volume" layoutX="204.0" layoutY="31.0" max="100.0" min="0.0" value="100.0" />
+                  <Label fx:id="total" layoutX="317.0" layoutY="4.0" text="--:--" textFill="WHITE" />
+               </children>
+            </Pane>
+         </right>
+         <top>
+            <Slider fx:id="file" prefHeight="18.0" prefWidth="832.0" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <ImageView fx:id="open" fitHeight="60.0" fitWidth="71.0" translateX="34.0" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../images/add.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </bottom>
+   <center>
+      <MediaView fx:id="viewer" fitHeight="510.0" fitWidth="1140.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <ImageView fx:id="audi" fitHeight="76.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true" translateY="200.0" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
